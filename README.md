@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# IoT Sensor Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack real-time dashboard for monitoring and visualizing sensor data, built using React, Node.js, and Arduino.
 
-## Available Scripts
+## Overview
+This project simulates a real-world data pipeline where sensor data is collected, processed, and displayed in real time. It focuses on reliable data flow, system structure, and handling inconsistent inputs.
 
-In the project directory, you can run:
+## Features
+- Real-time data updates using WebSockets (Socket.IO)
+- Live visualization of sensor readings in a React dashboard
+- Backend processing of incoming hardware data
+- Error handling and validation for missing or inconsistent sensor inputs
+- Dockerized backend for consistent deployment
 
-### `npm start`
+## Tech Stack
+- Frontend: React
+- Backend: Node.js, Express
+- Communication: WebSockets (Socket.IO)
+- Hardware: Arduino (sensor simulation)
+- Deployment: Docker
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## System Architecture
+Sensor Data → Node.js Backend → WebSocket Server → React Frontend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Sensors send data via serial communication
+- Backend processes and validates incoming data
+- WebSocket streams updates to frontend
+- Frontend renders live dashboard updates
 
-### `npm test`
+## My Contributions
+- Designed and implemented real-time data pipeline from hardware to UI
+- Built backend services for processing and streaming sensor data
+- Implemented validation and error handling to improve system reliability
+- Structured code into modular components for scalability
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future Improvements
+- Add persistent storage (e.g., database for historical data)
+- Implement authentication and user-specific dashboards
+- Deploy on cloud infrastructure for remote access
